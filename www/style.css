@@ -1,0 +1,198 @@
+::root {
+  var-advWidth: 200px;
+}
+
+#navBar {
+    position: fixed;
+    top: 0;
+    left: 280px;
+    right: 0;
+    background: red;
+    height: 30px;
+    padding: 10px;
+    z-index: 999;
+    display: inline;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#content {
+    background: blue;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+._content {
+    background: orange;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#centerContainer {
+    position: absolute;
+    top: 50px;
+    background: #005050;
+    margin-left: 280px;
+    margin-right:200px;
+    padding: 10px;
+    
+}html>body #centerContainer {
+    margin-left: 280x;
+    margin-right:200px;
+}
+
+#advSpace {    
+    background: green;
+    position: fixed;
+    right:0px;
+    top:50px;
+    bottom:0px;
+    width: 200px;
+}
+
+#mainContainer {
+    
+}
+
+#sideNav {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: #500000;
+    width:280px;
+    height:100%;
+    padding:0px;
+    float:left;
+}
+
+html, body { height: 100%; width: 100%; margin: 0; }
+
+.navBarPlayer {
+    display: inline-block;
+    position: relative;
+  //  float: right;
+    width: 120px;
+    height: 30px;
+    right: 0;
+    top: 0;
+}
+
+.navBarSideBtn {
+    background: orange;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.navBarPlayBtn {
+    background: purple;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    display: inline-block; 
+}
+
+.navBarRwBtn {
+    background: seagreen;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    display: inline-block; 
+}
+
+.navBarFfBtn {
+    background: moccasin;
+    position: relative; 
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    display: inline-block; 
+}
+
+#navBarTitle {
+    background: magenta;
+    //position: absolute;
+    width: 300px;
+    height: 30px;
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 50%;
+}
+
+.postSummary {
+    position: relative;
+    width:400px;
+    //height:475px;
+    background: #00ffff;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: top;
+   // min-height: 275px;
+}
+
+.postScreen {
+    position: fixed;
+    background: #0f0f0f;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	opacity: 0.99;
+}
+
+.postBoard {
+    position: relative;
+	display: block;
+    background: white;
+    width: 96%;
+	height: 80%;
+	max-width: 700px;
+	max-height:700px;
+	top: 10%;
+	margin: auto;
+}
+
+.postSummaryFooter {
+    background: gray;
+	width: 100%;
+	height: 20px;
+	margin-top: 5px;
+}
+
+.postSummaryExpander {
+    background: gold;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 0;
+	left: 15px;
+}
+
+.postSummaryTitle {
+    color: red;
+    font-size: 130%;
+    margin-bottom: 5px;
+}
+
+.postThumbnail {
+    float: left;
+}
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 0 0}
+
+.continueReading {
+	visibility: hidden;
+}
