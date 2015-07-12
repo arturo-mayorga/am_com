@@ -139,6 +139,8 @@ html, body { height: 100%; width: 100%; margin: 0; }
     padding-top: 10px;
     padding-bottom: 10px;
     vertical-align: top;
+    overflow-x: hidden;
+    overflow-y: hidden;
    // min-height: 275px;
 }
 
@@ -163,6 +165,24 @@ html, body { height: 100%; width: 100%; margin: 0; }
 	max-height:700px;
 	top: 10%;
 	margin: auto;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.postBody {
+}
+
+.postBoard .postBody .videoContainer {
+    width: 100%;
+    padding-bottom: 60%;
+   // padding-bottom: 50%;
+    position: relative;
+}
+
+.postBoard .postBody .videoContainer > iframe {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
 }
 
 .postSummaryFooter {
