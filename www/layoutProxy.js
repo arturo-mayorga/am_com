@@ -5,7 +5,7 @@ function LayoutProxy()
     this.addChild = function (child)
     {
          _children.push(child);
-    }
+    };
 
     this.populate = function()
     {
@@ -14,7 +14,7 @@ function LayoutProxy()
         {
             _children[i].populate();
         }
-    }
+    };
 
 
     this.stopAnimations = function()
@@ -24,7 +24,7 @@ function LayoutProxy()
         {
             _children[i].stopAnimations();
         }
-    }
+    };
 
     this.update = function()
     {
@@ -35,5 +35,14 @@ function LayoutProxy()
         {
             _children[i].layoutUpdate();
         }
-    }
+    };
+
+    this.distributeMessage = function( msg )
+    {
+        var i = 0;
+        for ( i = 0; i < _children.length; i++ )
+        {
+            _children[i].distributeMessage( msg );
+        }
+    };
 }

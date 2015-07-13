@@ -19,16 +19,18 @@ function SideNav(domObj)
     this.populate = function()
     {
          $("#sideNav").clearQueue().stop();
-    }
+    };
     
     this.stopAnimations = function()
     {
         
-    }
+    };
     
     this.layoutUpdate = function()
     {
         (_uiState.isSideNavVisible)?
         show():hide();
-    }
+    };
+
+    this.distributeMessage = function(){};
 }

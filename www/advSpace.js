@@ -17,16 +17,18 @@ function AdvSpace(domObj)
     this.populate = function()
     {
         
-    }
+    };
     
     this.stopAnimations = function()
     {
         $("#advSpace").clearQueue().stop();
-    }
+    };
     
     this.layoutUpdate = function()
     {
         (_uiState.getAdvVisibility())?
         show():hide();
-    }
+    };
+
+    this.distributeMessage = function(){};
 }

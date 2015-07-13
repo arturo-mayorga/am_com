@@ -5,9 +5,17 @@ var SIDE_NAV_WIDTH  = 280;
 var POST_SUMM_WIDTH = 275+20+10; // w + padding + margin
 var SCROLL_BAR_WIDTH = 0;
 
+var CATEGORIES = {
+    ALL: 0,
+    NEWS: 4,
+    REVIEWS: 5,
+    VIDEOS: 6
+};
+
 var _uiState = {
     isSideNavVisible: false,
     isAdvSpaceVisible: true,
+    currentCategory: CATEGORIES.ALL,
     
     getAdvVisibility: function()
     {
