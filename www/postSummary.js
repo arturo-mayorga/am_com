@@ -108,13 +108,18 @@ function Post(meta)
 {
     this._title = meta.title;
 	this._content = meta.content;
+    var urlSplit = meta.url.split('/');
+    this._url = urlSplit[urlSplit.length-1];
     this.show = function()
 	{
+        history.pushState({}, "new Title", "i.html"+this._url);
+
 	    var bg = document.createElement('div');
 		bg.className = "postScreen";
 		bg.onclick = function(e) 
 		{ 
-		document.body.removeChild(bg); 
+		    document.body.removeChild(bg);
+            history.back();
 		};
 		
 		var board = document.createElement('div');

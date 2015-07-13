@@ -91,5 +91,10 @@ var waitForFinalEvent = (function () {
   };
 })();
 
+/*window.onpopstate = function(event)
+{
+    console.log('break;');
+}*/
+
 $(document).ready(app_init);
 

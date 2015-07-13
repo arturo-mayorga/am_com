@@ -37,8 +37,9 @@
     margin-left: 280px;
     margin-right:200px;
     padding: 10px;
-    
-}html>body #centerContainer {
+}
+
+html>body #centerContainer {
     margin-left: 280x;
     margin-right:200px;
 }
@@ -71,12 +72,11 @@ html, body { height: 100%; width: 100%; margin: 0; }
 
 .navBarPlayer {
     display: inline-block;
-    position: relative;
-  //  float: right;
+ //   position: relative;
     width: 120px;
-    height: 30px;
-    right: 0;
-    top: 0;
+ //   height: 30px;
+ //   right: 0;
+ //   top: 0;
 }
 
 .navBarSideBtn {
@@ -116,12 +116,16 @@ html, body { height: 100%; width: 100%; margin: 0; }
 
 #navBarTitle {
     background: magenta;
-    //position: absolute;
+    position: relative;
     width: 300px;
     height: 30px;
     margin-left: 10px;
     display: inline-block;
     font-size: 50%;
+}
+
+#navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn {
+    margin-bottom: 20px;
 }
 
 .postSummary {
@@ -141,7 +145,7 @@ html, body { height: 100%; width: 100%; margin: 0; }
     vertical-align: top;
     overflow-x: hidden;
     overflow-y: hidden;
-   // min-height: 275px;
+    // max-height: 275px;
 }
 
 .postScreen {
