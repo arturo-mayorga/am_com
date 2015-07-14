@@ -19,6 +19,24 @@ function SideNav(domObj)
     this.populate = function()
     {
          $("#sideNav").clearQueue().stop();
+
+        var navBarSideBtn = document.createElement('div');
+        navBarSideBtn.className = "menuItem";
+        navBarSideBtn.innerHTML = 'Home';
+        navBarSideBtn.onclick = function(){_uiState.currentCategory = CATEGORIES.ALL;  _layout.distributeMessage('reload');};
+        this._domObj.appendChild(navBarSideBtn);
+
+        navBarSideBtn = document.createElement('div');
+        navBarSideBtn.className = "menuItem";
+        navBarSideBtn.innerHTML = 'Video';
+        navBarSideBtn.onclick = function(){_uiState.currentCategory = CATEGORIES.VIDEOS;  _layout.distributeMessage('reload');};
+        this._domObj.appendChild(navBarSideBtn);
+
+        navBarSideBtn = document.createElement('div');
+        navBarSideBtn.className = "menuItem";
+        navBarSideBtn.innerHTML = 'Reviews';
+        navBarSideBtn.onclick = function(){_uiState.currentCategory = CATEGORIES.REVIEWS;  _layout.distributeMessage('reload');};
+        this._domObj.appendChild(navBarSideBtn);
     };
     
     this.stopAnimations = function()

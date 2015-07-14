@@ -211,6 +211,20 @@ html, body { height: 100%; width: 100%; margin: 0; }
     margin-bottom: 5px;
 }
 
+.menuItem {
+    color: #fff;
+    font-size: 130%;
+    margin-bottom: 2px;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+
+}
+
+.menuItem, .postSummaryExpander, #navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn {
+    cursor: pointer; cursor: hand;
+}
+
 .postThumbnail {
     float: left;
 }

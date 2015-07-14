@@ -13,7 +13,18 @@ function NavBar(domObj)
         var navBarTitle = document.createElement('img');
         navBarTitle.className = "navBarTitle";
         navBarTitle.id = "navBarTitle";
-       // navBarTitle.innerHTML = 'Arturo Mayorga'
+        navBarTitle.onclick = function()
+        {
+            if ( CATEGORIES.ALL === _uiState.currentCategory)
+            {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            }
+            else
+            {
+                _uiState.currentCategory = CATEGORIES.ALL;
+                _layout.distributeMessage('reload');
+            }
+        };
         navBarTitle.src = "http://arturomayorga.com/ext/img/hdr-home.png";
         this._domObj.appendChild(navBarTitle);
         
@@ -33,12 +44,12 @@ function NavBar(domObj)
         
         var navBarPlayBtn = document.createElement('div');
         navBarPlayBtn.className = "navBarPlayBtn";
-        navBarPlayBtn.onclick = function(){_uiState.currentCategory = CATEGORIES.VIDEOS;  _layout.distributeMessage('reload');};
+        navBarPlayBtn.onclick = function(){};
         navBarPlayer.appendChild(navBarPlayBtn);
         
         var navBarFfBtn = document.createElement('div');
         navBarFfBtn.className = "navBarFfBtn";
-        navBarFfBtn.onclick = function(){_uiState.currentCategory = CATEGORIES.ALL;  _layout.distributeMessage('reload');};
+        navBarFfBtn.onclick = function(){};
         navBarPlayer.appendChild(navBarFfBtn);
         
         navBarPlayer.appendChild(audio);
