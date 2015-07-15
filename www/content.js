@@ -81,7 +81,7 @@ function Content(domObj)
             _this._loading = false;
             _this.scrollCheckForContent();
                   
-        }).error(function(jq,textStatus, error){_this._loading = false; console.debug("error " + textStatus + " errorTH "+error+' '+url);});
+        }).error(function(jq,textStatus, error){ console.debug("error " + textStatus + " errorTH "+error+' '+url); });
     }
     
     this.appendChild = function(child)
@@ -99,6 +99,7 @@ function Content(domObj)
             {
                 this._domObj_0.removeChild(this._children[i]._domObj);
             }
+            this._loading = false;
             this._children = [];
             _lastPageRequested = 0;
             this.scrollCheckForContent();

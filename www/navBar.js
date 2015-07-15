@@ -13,18 +13,7 @@ function NavBar(domObj)
         var navBarTitle = document.createElement('img');
         navBarTitle.className = "navBarTitle";
         navBarTitle.id = "navBarTitle";
-        navBarTitle.onclick = function()
-        {
-            if ( CATEGORIES.ALL === _uiState.currentCategory)
-            {
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-            }
-            else
-            {
-                _uiState.currentCategory = CATEGORIES.ALL;
-                _layout.distributeMessage('reload');
-            }
-        };
+        navBarTitle.onclick = _uiState.getNaveHandler(CATEGORIES.ALL);
         navBarTitle.src = "http://arturomayorga.com/ext/img/hdr-home.png";
         this._domObj.appendChild(navBarTitle);
         

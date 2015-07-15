@@ -22,6 +22,21 @@ var _uiState = {
         return (this.isAdvSpaceVisible &&
                 window.innerWidth >= POST_SUMM_WIDTH+ADV_SPACE_WIDTH+20+
                                      (this.isSideNavVisible?SIDE_NAV_WIDTH:0));
+    },
+
+    getNaveHandler: function( category )
+    {
+        return function()
+        {
+            if ( category === this.currentCategory )
+            {
+                $("html, body").animate({scrollTop: 0}, "slow");
+            }
+            else {
+                this.currentCategory = category;
+                _layout.distributeMessage('reload');
+            }
+        }.bind(this);
     }
 };
 
