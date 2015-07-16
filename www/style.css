@@ -96,6 +96,15 @@ html, body { height: 100%; width: 100%; margin: 0; }
     display: inline-block; 
 }
 
+.navBarPauseBtn {
+    background: blue;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
 .navBarRwBtn {
     background: seagreen;
     position: relative;
@@ -124,7 +133,7 @@ html, body { height: 100%; width: 100%; margin: 0; }
     font-size: 50%;
 }
 
-#navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn {
+#navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn {
     margin-bottom: 20px;
 }
 
@@ -220,7 +229,7 @@ html, body { height: 100%; width: 100%; margin: 0; }
 
 }
 
-.menuItem, .postSummaryExpander, #navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn {
+.menuItem, .postSummaryExpander, #navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn {
     cursor: pointer; cursor: hand;
 }
 
