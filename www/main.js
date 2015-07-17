@@ -1,9 +1,12 @@
+document.title = 'Arturo Mayorga | Home';
+
 var ANIM_LEN        = 0;
 var NAV_BAR_HEIGHT  = 50;
 var ADV_SPACE_WIDTH = 200;
 var SIDE_NAV_WIDTH  = 280;
 var POST_SUMM_WIDTH = 275+20+10; // w + padding + margin
 var SCROLL_BAR_WIDTH = 0;
+var PAGE_NAME = '';
 
 var CATEGORIES = {
     ALL: 0,
@@ -11,6 +14,14 @@ var CATEGORIES = {
     REVIEWS: 5,
     VIDEOS: 6
 };
+
+var MENU_ITEMS = [CATEGORIES.ALL,CATEGORIES.NEWS,CATEGORIES.REVIEWS,CATEGORIES.VIDEOS];
+
+var CATEGORY_NAMES = {};
+CATEGORY_NAMES[CATEGORIES.ALL] = 'Home';
+CATEGORY_NAMES[CATEGORIES.NEWS] = 'News';
+CATEGORY_NAMES[CATEGORIES.REVIEWS] = 'Reviews';
+CATEGORY_NAMES[CATEGORIES.VIDEOS] = 'Videos';
 
 var _uiState = {
     isSideNavVisible: false,
@@ -35,6 +46,7 @@ var _uiState = {
             else {
                 this.currentCategory = category;
                 _layout.distributeMessage('reload');
+                document.title = 'Arturo Mayorga | ' + CATEGORY_NAMES[category];
             }
         }.bind(this);
     }
@@ -52,8 +64,14 @@ function getQueryVariables()
     }
     return map;
 }
-
 var _uriMap = getQueryVariables();
+
+function getPageName()
+{
+    var splitPath = window.location.pathname.split('/');
+    return splitPath[splitPath.length-1];
+}
+PAGE_NAME = getPageName();
 
 var _layout;
 
@@ -122,13 +140,13 @@ function app_init()
             }
             else
             {
-                history.replaceState({}, '', 'i.html');
+                history.replaceState({}, '', PAGE_NAME);
             }
         });
     }
     else
     {
-        history.replaceState({}, '', 'i.html');
+        history.replaceState({}, '', PAGE_NAME);
     }
 }
 

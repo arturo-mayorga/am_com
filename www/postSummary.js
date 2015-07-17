@@ -112,7 +112,12 @@ function Post(meta)
     this._url = urlSplit[urlSplit.length-1];
     this.show = function()
 	{
-        history.pushState({}, "new Title", "i.html"+this._url);
+        history.pushState({}, '', PAGE_NAME+this._url);
+
+        this._returnTitle = document.title;
+        var _this = this;
+
+        document.title = 'Arturo Mayorga | ' + this._title;
 
 	    var bg = document.createElement('div');
 		bg.className = "postScreen";
@@ -120,7 +125,8 @@ function Post(meta)
 		{ 
 		    document.body.removeChild(bg);
             history.back();
-            history.replaceState({}, '', 'i.html');
+            history.replaceState({}, '', PAGE_NAME);
+            document.title = _this._returnTitle;
 		};
 		
 		var board = document.createElement('div');

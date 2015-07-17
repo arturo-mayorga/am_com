@@ -20,23 +20,14 @@ function SideNav(domObj)
     {
          $("#sideNav").clearQueue().stop();
 
-        var navBarSideBtn = document.createElement('div');
-        navBarSideBtn.className = "menuItem";
-        navBarSideBtn.innerHTML = 'Home';
-        navBarSideBtn.onclick = _uiState.getNaveHandler(CATEGORIES.ALL);
-        this._domObj.appendChild(navBarSideBtn);
-
-        navBarSideBtn = document.createElement('div');
-        navBarSideBtn.className = "menuItem";
-        navBarSideBtn.innerHTML = 'Video';
-        navBarSideBtn.onclick = _uiState.getNaveHandler(CATEGORIES.VIDEOS);
-        this._domObj.appendChild(navBarSideBtn);
-
-        navBarSideBtn = document.createElement('div');
-        navBarSideBtn.className = "menuItem";
-        navBarSideBtn.innerHTML = 'Reviews';
-        navBarSideBtn.onclick = _uiState.getNaveHandler(CATEGORIES.REVIEWS);
-        this._domObj.appendChild(navBarSideBtn);
+        for ( var i in MENU_ITEMS )
+        {
+            var menuDom = document.createElement('div');
+            menuDom.className = "menuItem";
+            menuDom.innerHTML = CATEGORY_NAMES[MENU_ITEMS[i]];
+            menuDom.onclick = _uiState.getNaveHandler(MENU_ITEMS[i]);
+            this._domObj.appendChild(menuDom);
+        }
     };
     
     this.stopAnimations = function()
