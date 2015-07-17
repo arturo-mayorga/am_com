@@ -58,9 +58,7 @@ function Content(domObj)
     function getNextContentUrl()
     {
         _lastPageRequested += 1;
-        
-     //   return "../site/?paged=" + _lastPageRequested + "&json=true";
-        return "../site/?paged=" + _lastPageRequested + "&json=true&cat="+_uiState.currentCategory;
+        return CONTENT_SERVICE_LOCATION+'?paged=' + _lastPageRequested + "&json=true&cat="+_uiState.currentCategory;
     }
     
     function appendContent(_this, url)

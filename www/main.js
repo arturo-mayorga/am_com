@@ -7,6 +7,7 @@ var SIDE_NAV_WIDTH  = 280;
 var POST_SUMM_WIDTH = 275+20+10; // w + padding + margin
 var SCROLL_BAR_WIDTH = 0;
 var PAGE_NAME = '';
+var CONTENT_SERVICE_LOCATION = '../site/';
 
 var CATEGORIES = {
     ALL: 0,
@@ -128,7 +129,7 @@ function app_init()
 
     if ( undefined !== _uriMap.p )
     {
-        $.getJSON( '../site/?p='+_uriMap.p+'&json=true', {}, function( data )
+        $.getJSON( CONTENT_SERVICE_LOCATION+'?p='+_uriMap.p+'&json=true', {}, function( data )
         {
             console.log( JSON.stringify(data.post) )
             console.log( data.status );
