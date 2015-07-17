@@ -40,6 +40,21 @@ var _uiState = {
     }
 };
 
+function getQueryVariables()
+{
+    var map = {};
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++)
+    {
+        var pair = vars[i].split("=");
+        map[pair[0]] = pair[1];
+    }
+    return map;
+}
+
+var _uriMap = getQueryVariables();
+
 var _layout;
 
 function getScrollbarWidth() {
