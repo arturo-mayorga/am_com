@@ -107,6 +107,29 @@ function app_init()
     });
     
     document.addEventListener('scroll', function(){content.scrollCheckForContent();});
+
+    if ( undefined !== _uriMap.p )
+    {
+        $.getJSON( '../site/?p='+_uriMap.p+'&json=true', {}, function( data )
+        {
+            console.log( JSON.stringify(data.post) )
+            console.log( data.status );
+
+            if ( 'ok' === data.status )
+            {
+                var post = new Post(data.post);
+                post.show();
+            }
+            else
+            {
+                history.replaceState({}, '', 'i.html');
+            }
+        });
+    }
+    else
+    {
+        history.replaceState({}, '', 'i.html');
+    }
 }
 
 function onSideNavToggleSignal()

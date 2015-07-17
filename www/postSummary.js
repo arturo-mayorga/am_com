@@ -6,7 +6,7 @@ function PostSummary(config)
 	{
 	    var post = new Post(this._meta);
 		post.show();
-	}
+	};
 	
     function createDomObj(_this, args)
     {
@@ -120,6 +120,7 @@ function Post(meta)
 		{ 
 		    document.body.removeChild(bg);
             history.back();
+            history.replaceState({}, '', 'i.html');
 		};
 		
 		var board = document.createElement('div');
