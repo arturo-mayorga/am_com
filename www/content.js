@@ -30,9 +30,10 @@ function Content(domObj)
             for ( i in this._columnDomObjs )
             {
                 tempDom1 = this._columnDomObjs[i];
-                for ( j in tempDom1.children )
+
+                while (tempDom1.firstChild)
                 {
-                   // tempDom1.removeChild( tempDom1.children[j] );
+                    tempDom1.removeChild(tempDom1.firstChild);
                 }
 
                 this._domObj_0.removeChild( tempDom1 );
@@ -160,10 +161,18 @@ function Content(domObj)
         if ( 'reload' === msg )
         {
             var i = 0;
-            for ( i = 0; i < this._children.length; ++i )
+            var tempDom1;
+            
+            for ( i in this._columnDomObjs )
             {
-                this._domObj_0.removeChild(this._children[i]._domObj);
+                tempDom1 = this._columnDomObjs[i];
+
+                while (tempDom1.firstChild)
+                {
+                    tempDom1.removeChild(tempDom1.firstChild);
+                }
             }
+
             this._loading = false;
             this._children = [];
             _lastPageRequested = 0;
