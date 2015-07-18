@@ -33,9 +33,12 @@ var _uiState = {
     
     getAdvVisibility: function()
     {
-        return (this.isAdvSpaceVisible &&
-                window.innerWidth >= POST_SUMM_WIDTH_MIN+ADV_SPACE_WIDTH+20+
-                                     (this.isSideNavVisible?SIDE_NAV_WIDTH:0));
+        var enableAds = false;
+
+
+        return enableAds && (this.isAdvSpaceVisible &&
+                             window.innerWidth >= POST_SUMM_WIDTH_MIN+ADV_SPACE_WIDTH+20+
+                                                  (this.isSideNavVisible?SIDE_NAV_WIDTH:0));
     },
 
     getNaveHandler: function( category )
