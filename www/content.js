@@ -4,7 +4,7 @@ function Content(domObj)
     this._domObj = domObj;
     this._domObj_0 = document.getElementById('content_0');
     this._children = [];
-    this._columnCount = 1;
+    this._columnCount = 0;
     this._columnDomObjs = [];
     this.populate = function()
     {
@@ -149,8 +149,10 @@ function Content(domObj)
     
     this.appendChild = function(child)
     {
+        console.log( this._columnCount );
         this._children.push(child);
-        this._domObj_0.appendChild(child._domObj);
+       // this._domObj_0.appendChild(child._domObj);
+        this._columnDomObjs[(this._children.length-1)%this._columnCount].appendChild(child._domObj);
     };
 
     this.distributeMessage = function( msg )
