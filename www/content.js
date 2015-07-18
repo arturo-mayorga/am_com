@@ -22,6 +22,15 @@ function Content(domObj)
         ((_uiState.getAdvVisibility())?ADV_SPACE_WIDTH:0) -
         ((_uiState.isSideNavVisible)?SIDE_NAV_WIDTH:0);
         leftSpace -= 20+SCROLL_BAR_WIDTH;
+
+        var columns = Math.round(leftSpace/POST_SUMM_WIDTH_MIN);
+
+        POST_SUMM_WIDTH = Math.floor(leftSpace/columns);
+
+        if ( POST_SUMM_WIDTH > leftSpace )
+        {
+            POST_SUMM_WIDTH = leftSpace;
+        }
         
         if (leftSpace > POST_SUMM_WIDTH)
         {
@@ -35,6 +44,11 @@ function Content(domObj)
         domObj.style.paddingRight = domObj.style.paddingLeft = leftSpace/2 + "px";
         
         this.scrollCheckForContent();
+
+        for ( var i in this._children )
+        {
+            this._children[i].layoutUpdate();
+        }
     };
     
     this.scrollCheckForContent = function()

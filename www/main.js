@@ -4,7 +4,9 @@ var ANIM_LEN        = 0;
 var NAV_BAR_HEIGHT  = 50;
 var ADV_SPACE_WIDTH = 200;
 var SIDE_NAV_WIDTH  = 280;
-var POST_SUMM_WIDTH = 275+20+10; // w + padding + margin
+var POST_SUMM_WIDTH_MIN = 375+20+10; // w + padding + margin
+var POST_SUMM_WIDTH_MAX = 475+20+10; // w + padding + margin
+var POST_SUMM_WIDTH = POST_SUMM_WIDTH_MAX;
 var SCROLL_BAR_WIDTH = 0;
 var PAGE_NAME = '';
 var CONTENT_SERVICE_LOCATION = '../site/';
@@ -32,7 +34,7 @@ var _uiState = {
     getAdvVisibility: function()
     {
         return (this.isAdvSpaceVisible &&
-                window.innerWidth >= POST_SUMM_WIDTH+ADV_SPACE_WIDTH+20+
+                window.innerWidth >= POST_SUMM_WIDTH_MIN+ADV_SPACE_WIDTH+20+
                                      (this.isSideNavVisible?SIDE_NAV_WIDTH:0));
     },
 

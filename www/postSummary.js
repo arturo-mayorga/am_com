@@ -33,6 +33,7 @@ function PostSummary(config)
             {
                 var text = document.createElement('div');
                 text.innerHTML = args.excerpt;
+                text.className = "postSummaryContent";
                 post.appendChild(text);
             }
         }
@@ -42,6 +43,7 @@ function PostSummary(config)
             {
                 var text = document.createElement('div');
                 text.innerHTML = getExcerptFromContent(args.content);
+                text.className = "postSummaryContent";
                 post.appendChild(text);
             }
         }
@@ -102,6 +104,11 @@ function PostSummary(config)
     }
 
     this._domObj = createDomObj(this, this._meta );
+
+    this.layoutUpdate = function()
+    {
+        this._domObj.style.width = (POST_SUMM_WIDTH-30)+"px";
+    };
 }
 
 function Post(meta)
