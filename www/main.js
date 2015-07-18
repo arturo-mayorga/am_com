@@ -54,6 +54,7 @@ var _uiState = {
                 _layout.distributeMessage('reload');
                 document.title = 'Arturo Mayorga | ' + CATEGORY_NAMES[category];
             }
+            onSideNavToggleSignal();
         }.bind(this);
     }
 };

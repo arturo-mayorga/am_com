@@ -22,6 +22,10 @@ function Content(domObj)
     {
         var i; var j;
         var tempDom1;
+        if ( 0 === newColumnCount )
+        {
+            newColumnCount = 1;
+        }
 
         if ( this._columnCount !== newColumnCount )
         {
@@ -150,7 +154,6 @@ function Content(domObj)
     
     this.appendChild = function(child)
     {
-        console.log( this._columnCount );
         this._children.push(child);
        // this._domObj_0.appendChild(child._domObj);
         this._columnDomObjs[(this._children.length-1)%this._columnCount].appendChild(child._domObj);
@@ -162,7 +165,7 @@ function Content(domObj)
         {
             var i = 0;
             var tempDom1;
-            
+
             for ( i in this._columnDomObjs )
             {
                 tempDom1 = this._columnDomObjs[i];
