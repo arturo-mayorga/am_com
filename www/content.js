@@ -4,6 +4,8 @@ function Content(domObj)
     this._domObj = domObj;
     this._domObj_0 = document.getElementById('content_0');
     this._children = [];
+    this._columnCount = 1;
+    this._columnDomObjs = [];
     this.populate = function()
     {
          $("#sideNav").clearQueue().stop();
@@ -15,6 +17,52 @@ function Content(domObj)
         $("#centerContainer").clearQueue().stop();
         $("#content").clearQueue().stop();
     };
+
+    this.updateSummaryColumns = function( newColumnCount, columnWidth )
+    {
+        var i; var j;
+        var tempDom1;
+
+        if ( this._columnCount !== newColumnCount )
+        {
+            // remove the post summaries from the obsolete columns
+            // remove the obsolete columns
+            for ( i in this._columnDomObjs )
+            {
+                tempDom1 = this._columnDomObjs[i];
+                for ( j in tempDom1.children )
+                {
+                   // tempDom1.removeChild( tempDom1.children[j] );
+                }
+
+                this._domObj_0.removeChild( tempDom1 );
+            }
+
+            // create the new columns and parent them
+            this._columnDomObjs = [];
+            for ( i = 0; i < newColumnCount; ++i )
+            {
+                tempDom1 = document.createElement('div');
+                tempDom1.className = 'postColumn';
+                this._columnDomObjs.push( tempDom1 );
+                this._domObj_0.appendChild( tempDom1 );
+            }
+
+            // move the post sommaries to their new columns
+            for ( i in this._children )
+            {
+                this._columnDomObjs[i%newColumnCount].appendChild(this._children[i]._domObj);
+            }
+        }
+
+        for ( i = 0; i < newColumnCount; ++i )
+        {
+            tempDom1 = this._columnDomObjs[i];
+            tempDom1.style.width = columnWidth+'px';
+        }
+
+        this._columnCount = newColumnCount;
+    };
     
     this.layoutUpdate = function()
     {
@@ -25,12 +73,15 @@ function Content(domObj)
 
         var columns = Math.round(leftSpace/POST_SUMM_WIDTH_MIN);
 
+
         POST_SUMM_WIDTH = Math.floor(leftSpace/columns);
 
         if ( POST_SUMM_WIDTH > leftSpace )
         {
             POST_SUMM_WIDTH = leftSpace;
         }
+
+        this.updateSummaryColumns( columns, POST_SUMM_WIDTH );
         
         if (leftSpace > POST_SUMM_WIDTH)
         {

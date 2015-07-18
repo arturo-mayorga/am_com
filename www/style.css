@@ -260,3 +260,8 @@ img.alignleft {float:left; margin:0 1em 0 0}
 .continueReading {
 	visibility: hidden;
 }
+
+.postColumn {
+    display: inline-block;
+    vertical-align:top;
+}
