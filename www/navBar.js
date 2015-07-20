@@ -32,20 +32,24 @@ function NavBar(domObj)
         this._navBarPlayer = navBarPlayer;
 		
         var navBarRwBtn = document.createElement('div');
-        navBarRwBtn.className = "navBarRwBtn";
+        navBarRwBtn.className = "navBarRwBtn flaticon-previous7";
         navBarRwBtn.onclick = function(e){e.stopPropagation(); this._playPrevTrack();}.bind(this);
 
         navBarPlayer.appendChild(navBarRwBtn);
         
         var navBarPlayBtn = document.createElement('div');
-        navBarPlayBtn.className = "navBarPlayBtn";
+        navBarPlayBtn.className = "navBarPlayBtn flaticon-play36";
         navBarPlayBtn.onclick = function(e){e.stopPropagation(); this._playTrack(this._track);}.bind(this);
         navBarPlayer.appendChild(navBarPlayBtn);
         this._playPauseDom = navBarPlayBtn;
         
         var navBarFfBtn = document.createElement('div');
-        navBarFfBtn.className = "navBarFfBtn";
+        navBarFfBtn.className = "navBarFfBtn flaticon-next9";
         navBarFfBtn.onclick = function(e){e.stopPropagation(); this._playNextTrack();}.bind(this);
+      //  navBarFfBtn.innerHTML = '::before';
+       // navBarFfBtn.innerHTML = '\e009';
+       // navBarFfBtn.innerHTML = '&#x20AC';
+       // navBarFfBtn.innerHTML = '[&#x009;]';
         navBarPlayer.appendChild(navBarFfBtn);
 
         this._domObj.appendChild(navBarPlayer);
@@ -70,7 +74,7 @@ function NavBar(domObj)
             this._audioDom.pause();
         }
 
-        this._playPauseDom.className = 'navBarPlayBtn';
+        this._playPauseDom.className = 'navBarPlayBtn flaticon-play36';
         this._playPauseDom.onclick = function(e){e.stopPropagation(); this._playTrack(this._track);}.bind(this);
     };
 
@@ -105,7 +109,7 @@ function NavBar(domObj)
 
         audio.play();
 
-        this._playPauseDom.className = 'navBarPauseBtn';
+        this._playPauseDom.className = 'navBarPauseBtn flaticon-pause8';
         this._playPauseDom.onclick = function(e){e.stopPropagation(); this._pauseTrack();}.bind(this);
 
         this._audioDom = audio;
