@@ -19,12 +19,24 @@ function NavBar(domObj)
         navBarSideBtn.className = "navBarSideBtn";
         navBarSideBtn.onclick = onSideNavToggleSignal;
         this._domObj.appendChild(navBarSideBtn);
+
+        var bar = document.createElement('div');
+        bar.className = 'sideBtnBarSpacer';
+        navBarSideBtn.appendChild( bar );
+
+        for ( var i = 0; i < 3; ++i )
+        {
+            bar = document.createElement('div');
+            bar.className = 'sideBtnBar';
+            navBarSideBtn.appendChild( bar );
+        }
         
-        var navBarTitle = document.createElement('img');
+        var navBarTitle = document.createElement('div');
         navBarTitle.className = "navBarTitle";
         navBarTitle.id = "navBarTitle";
         navBarTitle.onclick = _uiState.getNaveHandler(CATEGORIES.ALL);
-        navBarTitle.src = "http://arturomayorga.com/ext/img/hdr-home.png";
+        navBarTitle.innerHTML = 'Arturo Mayorga';
+        //navBarTitle.src = "http://arturomayorga.com/ext/img/hdr-home.png";
         this._domObj.appendChild(navBarTitle);
         
         var navBarPlayer = document.createElement('div');

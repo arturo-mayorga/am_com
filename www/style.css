@@ -97,9 +97,9 @@ margin-left: 20px; */
 }
 .flaticon-pause8:before {
     content: "\e00a";
-    margin-left: .3em;
-    line-height: 1.4em;
-    font-size: 120%;
+    margin-left: .45em;
+    line-height: 1.74em;
+    font-size: 100%;
 }
 .flaticon-play36:before {
     content: "\e00b";
@@ -167,7 +167,7 @@ margin-left: 20px; */
 }
 
 html>body #centerContainer {
-    margin-left: 280x;
+    margin-left: 280px;
     margin-right:200px;
 }
 
@@ -204,17 +204,36 @@ html, body { height: 100%; width: 100%; margin: 0; }
 }
 
 .navBarSideBtn {
-    background: orange;
+    background: transparent;
     position: relative;
     width: 30px;
     height: 30px;
     display: inline-block;
+
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    border-radius: 10%;
+
+    border: 1px;
+    border-color: #e0f4fe;
+    border-style: solid;
+}
+
+.sideBtnBarSpacer {
+    height: 11.11%;
+}
+.sideBtnBar {
+    background: #e0f4fe;
+    height: 11.11%;
+    width: 55.555%;
+    margin-top: 11.11%;
+    margin-left: 22.22%;
 }
 
 .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn, .navBarPlayBtn {
     background: transparent;
   //  background: #c2c2c2;
-    color:  #adf;
+    color:  #e0f4fe;
   //  color: red;
     position: relative;
     width: 26px;
@@ -228,19 +247,21 @@ html, body { height: 100%; width: 100%; margin: 0; }
     -moz-border-radius: 50%;
     border-radius: 50%;
 
-    border: 3px;
-    border-color: #adf;
+    border: 2px;
+    border-color: #e0f4fe;
     border-style: solid;
 }
 
 #navBarTitle {
   //  background: magenta;
     position: relative;
-    width: 300px;
+   // width: 300px;
     height: 30px;
     margin-left: 10px;
     display: inline-block;
-    font-size: 50%;
+    font-size: 175%;
+    vertical-align:top;
+    color: #e0f4fe;
 }
 
 #navBarTitle, .navBarSideBtn {
