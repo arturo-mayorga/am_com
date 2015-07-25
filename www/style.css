@@ -1,11 +1,11 @@
 /* font area start */
 @font-face {
     font-family: 'entypo';
-    src: url('../fonts/entypo.eot?49384070');
-    src: url('../fonts/entypo.eot?49384070#iefix') format('embedded-opentype'),
-    url('../fonts/entypo.woff?49384070') format('woff'),
-    url('../fonts/entypo.ttf?49384070') format('truetype'),
-    url('../fonts/entypo.svg?49384070#entypo') format('svg');
+    src: url('assets/fonts/entypo.eot?49384070');
+    src: url('assets/fonts/entypo.eot?49384070#iefix') format('embedded-opentype'),
+    url('assets/fonts/entypo.woff?49384070') format('woff'),
+    url('assets/fonts/entypo.ttf?49384070') format('truetype'),
+    url('assets/fonts/entypo.svg?49384070#entypo') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -697,7 +697,19 @@ html, body { height: 100%; width: 100%; margin: 0; }
     overflow-y: auto;
 }
 
-.postBody {
+.postTitle {
+    font-size: 175%;
+}
+
+.postBackButton {
+    font-size: 175%;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    background: black;
+    opacity: .5;
+    cursor: pointer; cursor: hand;
 }
 
 .postBoard .postBody .videoContainer {
@@ -774,7 +786,7 @@ html, body { height: 100%; width: 100%; margin: 0; }
 
 }
 
-.menuItem, .postSummaryExpander, #navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn {
+.postBackButton .menuItem, .postSummaryExpander, #navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn {
     cursor: pointer; cursor: hand;
 }
 
