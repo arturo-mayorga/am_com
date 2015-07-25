@@ -149,6 +149,11 @@ function Post(meta)
 		body.className = "postBody";
 		body.innerHTML = this._content;
 		board.appendChild(body);
+
+        var backButton = document.createElement('div');
+        backButton.className = 'icon-left-circled postBackButton';
+        backButton.onclick = bg.onclick;
+        board.appendChild(backButton);
 		
 		
 		bg.appendChild(board);
