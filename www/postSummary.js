@@ -131,8 +131,9 @@ function Post(meta)
 		bg.onclick = function(e) 
 		{ 
 		    document.body.removeChild(bg);
+            SUPRESS_NEXT_RELOAD = true;
             history.back();
-            history.replaceState({}, '', PAGE_NAME);
+            history.replaceState({}, '', PAGE_NAME+'?');
             document.title = _this._returnTitle;
 		};
 		

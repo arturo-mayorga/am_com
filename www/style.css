@@ -708,7 +708,7 @@ html, body { height: 100%; width: 100%; margin: 0; }
     top: 5px;
     right: 0px;
     background: black;
-    opacity: .5;
+    opacity: .75;
     cursor: pointer; cursor: hand;
 }
 

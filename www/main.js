@@ -159,7 +159,19 @@ function app_init()
     {
         history.replaceState({}, '', PAGE_NAME);
     }
+
+    window.onpopstate=function(event)
+    {
+        if ( false === SUPRESS_NEXT_RELOAD )
+        {
+            location.reload();
+        }
+
+        SUPRESS_NEXT_RELOAD = false;
+    }
 }
+
+var SUPRESS_NEXT_RELOAD = false;
 
 function onSideNavToggleSignal()
 {
@@ -181,10 +193,6 @@ var waitForFinalEvent = (function () {
   };
 })();
 
-/*window.onpopstate = function(event)
-{
-    console.log('break;');
-}*/
 
 $(document).ready(app_init);
 
