@@ -144,14 +144,13 @@ function app_init()
             console.log( JSON.stringify(data.post) )
             console.log( data.status );
 
+            history.replaceState({}, '', PAGE_NAME+'?');
+
             if ( 'ok' === data.status )
             {
+
                 var post = new Post(data.post);
                 post.show();
-            }
-            else
-            {
-                history.replaceState({}, '', PAGE_NAME);
             }
         });
     }
@@ -162,7 +161,7 @@ function app_init()
 
     window.onpopstate=function(event)
     {
-        if ( false === SUPRESS_NEXT_RELOAD )
+        if ( false === SUPRESS_NEXT_RELOAD && event.state )
         {
             location.reload();
         }
