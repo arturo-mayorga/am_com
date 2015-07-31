@@ -636,6 +636,16 @@ html, body { height: 100%; width: 100%; margin: 0; }
     border-style: solid;
 }
 
+.trackInfo {
+    width: 200px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 50%;
+    color:  #e0f4fe;
+    line-height: 25px;;
+}
+
 #navBarTitle {
   //  background: magenta;
     position: relative;

@@ -58,13 +58,21 @@ function NavBar(domObj)
         var navBarFfBtn = document.createElement('div');
         navBarFfBtn.className = "navBarFfBtn flaticon-next9";
         navBarFfBtn.onclick = function(e){e.stopPropagation(); this._playNextTrack();}.bind(this);
-      //  navBarFfBtn.innerHTML = '::before';
-       // navBarFfBtn.innerHTML = '\e009';
-       // navBarFfBtn.innerHTML = '&#x20AC';
-       // navBarFfBtn.innerHTML = '[&#x009;]';
         navBarPlayer.appendChild(navBarFfBtn);
 
         this._domObj.appendChild(navBarPlayer);
+
+        var trackInfo = document.createElement('div');
+        trackInfo.className = 'trackInfo';
+
+        this._domObj.appendChild(trackInfo);
+        this._trackInfoDiv = trackInfo;
+        this.setTrackName( 'Current Track: ' + this._playlist[this._track]);
+    };
+
+    this.setTrackName = function( trackName )
+    {
+        this._trackInfoDiv.innerHTML = trackName;
     };
     
     this.stopAnimations = function()
