@@ -20,6 +20,7 @@ function SideNav(domObj)
     {
          $("#sideNav").clearQueue().stop();
 
+
         for ( var i in MENU_ITEMS )
         {
             var menuDom = document.createElement('div');
@@ -28,6 +29,11 @@ function SideNav(domObj)
             menuDom.onclick = _uiState.getNaveHandler(MENU_ITEMS[i]);
             this._domObj.appendChild(menuDom);
         }
+
+        var amPiano = document.createElement('img');
+        amPiano.src = 'assets/img/am_piano.png';
+        amPiano.className = 'amPianoImg';
+        this._domObj.appendChild(amPiano);
     };
     
     this.stopAnimations = function()

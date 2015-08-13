@@ -774,7 +774,12 @@ html, body { height: 100%; width: 100%; margin: 0; }
     width: 100%;
     background: #101010;
     overflow: hidden;
+}
 
+.amPianoImg {
+    background: #101010;
+    opacity: .025;
+    width: 100%;
 }
 
 .postBackButton .menuItem, .postSummaryExpander, #navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn {
