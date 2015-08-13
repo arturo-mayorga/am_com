@@ -61,18 +61,6 @@ function NavBar(domObj)
         navBarPlayer.appendChild(navBarFfBtn);
 
         this._domObj.appendChild(navBarPlayer);
-
-        var trackInfo = document.createElement('div');
-        trackInfo.className = 'trackInfo';
-
-        this._domObj.appendChild(trackInfo);
-        this._trackInfoDiv = trackInfo;
-        this.setTrackName( 'Current Track: ' + this._playlist[this._track]);
-    };
-
-    this.setTrackName = function( trackName )
-    {
-        this._trackInfoDiv.innerHTML = trackName;
     };
     
     this.stopAnimations = function()
