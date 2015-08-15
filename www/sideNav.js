@@ -30,8 +30,8 @@ function SideNav(domObj)
             this._domObj.appendChild(menuDom);
         }
 
-        var amPiano = document.createElement('img');
-        amPiano.src = 'assets/img/am_piano.png';
+        var amPiano = document.createElement('div');
+        //amPiano.src = 'assets/img/am_piano.png';
         amPiano.className = 'amPianoImg';
         this._domObj.appendChild(amPiano);
     };

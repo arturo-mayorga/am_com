@@ -9,6 +9,8 @@ function NavBar(domObj)
         'a0210.mp3'
     ];
 
+    this._dlDiv;
+
     this._track = 0;
 
     this._isPlaying = false;
@@ -42,6 +44,12 @@ function NavBar(domObj)
         var navBarPlayer = document.createElement('div');
         navBarPlayer.className = "navBarPlayer";
         this._navBarPlayer = navBarPlayer;
+
+        var downLoad = document.createElement('div');
+        downLoad.className = 'navBarDlBtn icon-download';
+        navBarPlayer.appendChild(downLoad);
+        this._dlDiv = downLoad;
+        downLoad.style.opacity = 0;
 		
         var navBarRwBtn = document.createElement('div');
         navBarRwBtn.className = "navBarRwBtn flaticon-previous7";
@@ -73,6 +81,18 @@ function NavBar(domObj)
         
     };
 
+    this.showDlBtn = function()
+    {
+      //  this._dlDiv.style.opacity = 1;
+        $( this._dlDiv ).animate({opacity: 1}, { duration: ANIM_LEN, queue: false});
+    };
+
+    this.hideDlBtn = function()
+    {
+        //this._dlDiv.style.opacity = 0;
+        $( this._dlDiv ).animate({opacity: 0}, { duration: ANIM_LEN, queue: false});
+    }
+
     this.distributeMessage = function(){};
 
     this._pauseTrack = function()
@@ -84,6 +104,7 @@ function NavBar(domObj)
 
         this._playPauseDom.className = 'navBarPlayBtn flaticon-play36';
         this._playPauseDom.onclick = function(e){e.stopPropagation(); this._playTrack(this._track);}.bind(this);
+        this.hideDlBtn();
     };
 
     this._playNextTrack = function()
@@ -121,5 +142,6 @@ function NavBar(domObj)
         this._playPauseDom.onclick = function(e){e.stopPropagation(); this._pauseTrack();}.bind(this);
 
         this._audioDom = audio;
+        this.showDlBtn();
     };
 }

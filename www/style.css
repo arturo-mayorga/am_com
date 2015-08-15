@@ -584,7 +584,7 @@ html, body { height: 100%; width: 100%; margin: 0; }
 .navBarPlayer {
     display: inline-block;
     vertical-align:top;
-    width: 130px;
+    width: 160px;
     float: right;
 }
 
@@ -615,24 +615,35 @@ html, body { height: 100%; width: 100%; margin: 0; }
     margin-left: 22.22%;
 }
 
-.navBarRwBtn, .navBarFfBtn, .navBarPauseBtn, .navBarPlayBtn {
+
+
+.navBarDlBtn, .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn, .navBarPlayBtn {
     background: transparent;
     color:  #e0f4fe;
     position: relative;
-    width: 26px;
-    height: 26px;
+
     margin-left: 10px;
     display: inline-block;
 
     vertical-align:top;
 
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-
     border: 2px;
     border-color: #e0f4fe;
     border-style: solid;
+}
+
+.navBarRwBtn, .navBarFfBtn, .navBarPauseBtn, .navBarPlayBtn {
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+}
+
+.navBarDlBtn {
+    width: 23px;
+    height: 26px;
 }
 
 #navBarTitle {
@@ -777,12 +788,13 @@ html, body { height: 100%; width: 100%; margin: 0; }
 }
 
 .amPianoImg {
-    background: #101010;
+    background-image: url('assets/img/am_piano.png');
     opacity: .025;
     width: 100%;
+    height: 100%;
 }
 
-.postBackButton .menuItem, .postSummaryExpander, #navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn {
+.postBackButton .menuItem, .postSummaryExpander, #navBarTitle, .navBarSideBtn, .navBarPlayBtn, .navBarRwBtn, .navBarFfBtn, .navBarPauseBtn, .navBarDlBtn {
     cursor: pointer; cursor: hand;
 }
 
