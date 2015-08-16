@@ -4,9 +4,26 @@ function NavBar(domObj)
     this._domObj = domObj;
     this._jQObj = $("#navBar");
     this._playlist = [
-        'a0208.mp3',
-        'a0209.mp3',
-        'a0210.mp3'
+        'assets/audio/a0201.mp3',
+        'assets/audio/a0202.mp3',
+        'assets/audio/a0203.mp3',
+        'assets/audio/a0204.mp3',
+        'assets/audio/a0205.mp3',
+        'assets/audio/a0206.mp3',
+        'assets/audio/a0207.mp3',
+        'assets/audio/a0208.mp3',
+        'assets/audio/a0209.mp3',
+        'assets/audio/a0210.mp3',
+        'assets/audio/a0211.mp3',
+        'assets/audio/a0101.mp3',
+        'assets/audio/a0102.mp3',
+        'assets/audio/a0103.mp3',
+        'assets/audio/a0104.mp3',
+        'assets/audio/a0105.mp3',
+        'assets/audio/a0107.mp3',
+        'assets/audio/a0108.mp3',
+        'assets/audio/a0109.mp3',
+        'assets/audio/a0110.mp3'
     ];
 
     this._dlDiv;
