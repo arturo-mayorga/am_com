@@ -4,26 +4,31 @@ function NavBar(domObj)
     this._domObj = domObj;
     this._jQObj = $("#navBar");
     this._playlist = [
-        'assets/audio/a0201.mp3',
-        'assets/audio/a0202.mp3',
-        'assets/audio/a0203.mp3',
-        'assets/audio/a0204.mp3',
-        'assets/audio/a0205.mp3',
-        'assets/audio/a0206.mp3',
-        'assets/audio/a0207.mp3',
-        'assets/audio/a0208.mp3',
-        'assets/audio/a0209.mp3',
-        'assets/audio/a0210.mp3',
-        'assets/audio/a0211.mp3',
-        'assets/audio/a0101.mp3',
-        'assets/audio/a0102.mp3',
-        'assets/audio/a0103.mp3',
-        'assets/audio/a0104.mp3',
-        'assets/audio/a0105.mp3',
-        'assets/audio/a0107.mp3',
-        'assets/audio/a0108.mp3',
-        'assets/audio/a0109.mp3',
-        'assets/audio/a0110.mp3'
+        {
+            url:'assets/audio/a0201.mp3',
+            dlApple:'https://geo.itunes.apple.com/us/album/find-me-again/id514977457?i=514977467&mt=1&app=music',
+            dlGoogle:'https://play.google.com/store/music/album?id=Bu2utalm4htqzca25ao3mbu7exi&tid=song-Tjm34yz5l57g5kilcg6v37ixaze',
+            dlCdBaby:'http://www.cdbaby.com/cd/arturomayorga2'
+        },
+        {url:'assets/audio/a0202.mp3'},
+        {url:'assets/audio/a0203.mp3'},
+        {url:'assets/audio/a0204.mp3'},
+        {url:'assets/audio/a0205.mp3'},
+        {url:'assets/audio/a0206.mp3'},
+        {url:'assets/audio/a0207.mp3'},
+        {url:'assets/audio/a0208.mp3'},
+        {url:'assets/audio/a0209.mp3'},
+        {url:'assets/audio/a0210.mp3'},
+        {url:'assets/audio/a0211.mp3'},
+        {url:'assets/audio/a0101.mp3'},
+        {url:'assets/audio/a0102.mp3'},
+        {url:'assets/audio/a0103.mp3'},
+        {url:'assets/audio/a0104.mp3'},
+        {url:'assets/audio/a0105.mp3'},
+        {url:'assets/audio/a0107.mp3'},
+        {url:'assets/audio/a0108.mp3'},
+        {url:'assets/audio/a0109.mp3'},
+        {url:'assets/audio/a0110.mp3'}
     ];
 
     this._dlDiv;
@@ -64,6 +69,7 @@ function NavBar(domObj)
 
         var downLoad = document.createElement('div');
         downLoad.className = 'navBarDlBtn icon-download';
+        downLoad.onclick = function(e){e.stopPropagation(); this._onDownloadTrack();}.bind(this);
         navBarPlayer.appendChild(downLoad);
         this._dlDiv = downLoad;
         downLoad.style.opacity = 0;
@@ -96,6 +102,60 @@ function NavBar(domObj)
     this.layoutUpdate = function()
     {
         
+    };
+
+    this._onDownloadTrack = function()
+    {
+       // alert (this._playlist[this._track].dlApple);
+
+        //window.open(this._playlist[this._track].dlApple, 'am_comnewtab');
+        //window.focus();
+        //
+        var CLIENT_DEVICE = {
+            APPLE: 0,
+            ANDROID: 1,
+            OTHER: 2
+        };
+
+        function getClientDevice()
+        {
+            var ret = CLIENT_DEVICE.OTHER;
+
+            //alert (navigator.userAgent);
+
+            if ( navigator.userAgent.toLowerCase().indexOf("android") > -1 )
+            {
+                ret = CLIENT_DEVICE.ANDROID;
+            }
+            else if ((navigator.userAgent.toLowerCase().indexOf("ipad") > -1) ||
+                     (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) ||
+                     (navigator.userAgent.toLowerCase().indexOf("ipod") > -1) )
+            {
+                ret = CLIENT_DEVICE.APPLE;
+            }
+
+
+            return ret;
+        }
+        var clientDevice = getClientDevice();
+        var deviceDlUrl = ['dlApple', 'dlGoogle', 'dlCdBaby'];
+        devicedlUrl = deviceDlUrl[clientDevice];
+
+        var a = window.document.createElement("a");
+        a.target = '_blank';
+       // a.href = this._playlist[this._track].dlApple;
+        a.href = this._playlist[this._track][devicedlUrl];
+
+        // Dispatch fake click
+        var e = window.document.createEvent("MouseEvents");
+        e.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        a.dispatchEvent(e);
+
+        if ( clientDevice === CLIENT_DEVICE.ANDROID ||
+             clientDevice === CLIENT_DEVICE.APPLE )
+        {
+            this._pauseTrack();
+        }
     };
 
     this.showDlBtn = function()
@@ -149,7 +209,7 @@ function NavBar(domObj)
         var audio = document.createElement('audio');
         audio.id = "barAudio";
         var asrc = document.createElement('source');
-        asrc.type = 'audio/mpeg'; asrc.src = this._playlist[track];
+        asrc.type = 'audio/mpeg'; asrc.src = this._playlist[track].url;
         audio.appendChild(asrc);
         this._navBarPlayer.appendChild(audio);
 
