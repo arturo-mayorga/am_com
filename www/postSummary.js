@@ -39,7 +39,15 @@ function PostSummary(config)
         }
         else
         {
-            if (args.content !== "")
+            if (args.excerpt !== "")
+            {
+                var text = document.createElement('div');
+                text.innerHTML = args.excerpt;
+                text.className = "postSummaryContent";
+                post.appendChild(text);
+
+            }
+            else if (args.content !== "")
             {
                 var text = document.createElement('div');
                 text.innerHTML = getExcerptFromContent(args.content);
