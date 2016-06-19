@@ -1,0 +1,9 @@
+parameters:
+    p: number (for direct post)
+    paged: number (page number for a post collection page)
+    cat: number (category number when requesting a post collection page)
+
+files:
+    page_<cat>_<paged>.json
+    post_<p>.json
+

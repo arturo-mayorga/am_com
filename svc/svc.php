@@ -1,29 +1,51 @@
 <?php 
 
-    // echo $_GET["paged"] . '<p>'; 
-    // echo $_GET["cat"] . '<p>';
-
-
-    $file_handle = fopen("index.json", "r");
-    while (!feof($file_handle)) 
+function arg_value($argName)
+{
+    $ret = $_GET[$argName];
+    if ( NULL === $ret )
     {
-        $line = fgets($file_handle);
-        echo $line;
+        $ret = 0;
     }
-    fclose($file_handle);
 
-    $jsonTxt = file_get_contents('index.json');
-    // echo $jsonTxt;
+    return $ret;
+}
 
-    $json = json_decode($jsonTxt, true);
+$paged = arg_value("paged"); 
+$cat = arg_value("cat");
+$p = arg_value("p");
 
-    // var_dump($json['posts']);
+    
+function return_file($filename)
+{
+    $file_handle = fopen($filename, "r");
+    if ( $file_handle !== NULL && $file_handle !== false )
+    {
+        while (!feof($file_handle)) 
+        {
+            $line = fgets($file_handle);
+            echo $line;
+        }
+        fclose($file_handle);
+    }
+    else
+    {   
+        echo '{"status":"fnf"}';
+    }
+}
 
-    $posts = $json['posts'];
+$fileName = "";
 
-    arsort($posts);
+if ( $p > 0 )
+{
+    $fileName = "post_" . $p . ".json";
+}
+else
+{
+    $fileName = "page_" . $cat . "_" . $paged . ".json";
+}
 
-    // var_dump($posts);
+return_file($fileName);
 
 ?>
 
