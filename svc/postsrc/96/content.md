@@ -1,0 +1,1 @@
+We are very happy to announce that composer Arturo Mayorga has dedicated the theme song “If We Don’t Who Will” to We Sing For The World!
