@@ -1,0 +1,14 @@
+<p>Here is a new review of Lucid Dreams by Kathy Parsons of <a href="http://MainlyPiano.com" target="_blank">MainlyPiano.com</a>.</p>
+<p><a href="http://mainlypiano.com/2012_Reviews/Mayorga-Lucid_Dreams.html" target="_blank">Original review</a> quoted.</p>
+<p>“Lucid Dreams<br>
+Arturo Mayorga<br>
+2012 / Arturo Mayorga<br>
+50 minutes</p>
+<p>Lucid Dreams is the very impressive follow-up to Arturo Mayorga’s 2009 debut, Cascades. As he did on his first album, Mayorga has included an interesting variety of musical styles and moods that demonstrate his versatility as a composer and pianist/keyboardist. One of the eleven tracks is solo piano, and the others include guitar, flute, percussion and drums, wordless vocals, oboe, and/or strings. Some of the pieces indicate Yanni’s influence, but Mayorga is obviously finding and developing his own distinctive musical voice. Also an accomplished ballroom dancer, much of Mayorga’s music is very rhythmic and danceable. Even the slower ballads have the dreamy sway of a graceful slow dance. There is a lot to like about this album, and I think it will do a great deal to expand Mayorga’s audience and fan-base.</p>
+<p>Lucid Dreams begins with “Find Me Again,” a passionate love song with a strong beat and beautiful performances by Lew Tabackin on flute and Daniele Hager’s powerful soprano voice in addition to Mayorga’s piano. “Mystery” is a sultry ballad that conveys deep emotion with a slow dance rhythm and beautiful melody; as always, Jill Haley’s oboe adds an elegant touch. Haley also appears on the introspective “Looking,” conveying a sense of longing as she carries much of the lovely melody. “Eastern Pulse” picks up the pace with an exotic beat and a variety of keyboard sounds in addition to the piano. “Reflejos” has an energetic Latin flair with David Cullen’s impressive guitar and Jeff Haynes’ soaring percussion along with Mayorga’s dancing piano fingers. Smokin’! “Latent Words” is just Mayorga on piano with Daniele Hager’s voice and Steve Holley’s drums and percussion providing a strong, sensuous backbeat. I like the way this one sometimes resolves to a minor chord and sometimes to a major, making it a bit unpredictable. It’s a beautiful ballad no matter which direction it takes. “Within A Glimpse” is a tender, romantic love song that would be an elegant slow dance. “If We Don’t, Who Will?” is the only piano solo and overflows with emotion, ending the album with a sweet sigh.</p>
+<p>Lucid Dreams is available from <a href="http://www.arturomayorga.com" target="_blank">www.arturomayorga.com</a>, <a href="http://www.amazon.com/Lucid-Dreams-Arturo-Mayorga/dp/B007R3BEZI/" target="_blank">Amazon</a>, <a href="http://itunes.apple.com/us/album/lucid-dreams/id514977457?uo=4" target="_blank">iTunes</a>, and CD Baby. Check it out!</p>
+<p>Kathy Parsons<br>
+<a href="http://MainlyPiano.com" target="_blank"> MainlyPiano.com</a></p>
+<p>4/30/12</p>
+
+

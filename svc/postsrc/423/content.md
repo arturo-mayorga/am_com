@@ -1,0 +1,9 @@
+<p style="text-align: left;" align="center">This is a review by&nbsp;Raj Manoharan of&nbsp;<a href="http://www.rajmanreviews.blogspot.com/" target="_blank">www.rajmanreviews.blogspot.com</a>.</p>
+<p style="text-align: left;" align="center"><a href="http://www.rajmanreviews.blogspot.com/2012/05/cd-review-lucid-dreams-by-arturo.html" target="_blank">Original text</a> quoted below:</p>
+<p align="center">“CD&nbsp;Review&nbsp;–&nbsp;<em>Lucid Dreams,&nbsp;</em>by Arturo Mayorga</p>
+<p style="text-align: left;" align="center"><img class="alignright size-thumbnail wp-image-424" title="DSC_0064_2" src="http://arturomayorga.com/site/wp-content/uploads/2012/05/DSC_0064_2-150x115.jpg" alt="" height="115" width="150">Arturo Mayorga presents a collection of eleven tunes that accomplish what good music does – take listeners’ minds off their cares and transport them to a place of inspiration and enlightenment.</p>
+<p>The pianist/keyboardist alternates between solo tracks, duets, and a full ensemble. The rich sound is achieved by a full consort of musicians on <a href="http://www.cullenguitar.com/" target="_blank">guitar</a>, <a href="http://www.irishusa.com/holley/" target="_blank">drums</a>, <a href="http://jeffhaynesmusic.com/" target="_blank">percussion</a>, <a href="http://www.lewtabackin.com/" target="_blank">flute</a>, <a href="http://www.jillhaley.com/" target="_blank">oboe, English horn</a>, <a href="http://www.danielehager.com/" target="_blank">voice</a>, <a href="http://attaccaquartet.com/" target="_blank">violin, viola, and cello</a>.</p>
+<p>Mayorga is a master of his craft, constructing snappy compositions around his fine, pointed melodies. He has an acute understanding of pop sensibilities that makes his music accessible to listeners of every stripe.</p>
+<p>This is an enjoyable CD that is engaging from beginning to end.</p>
+<p>-Raj</p>
+

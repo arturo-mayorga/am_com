@@ -116,6 +116,16 @@ function generate_category_pages( $posts, $category )
 }
 
 $filelist = glob("*", GLOB_ONLYDIR);
+$filelistInt = array();
+foreach ( $filelist as $file )
+{
+    $filelistInt[] = (int)$file;
+}
+sort($filelistInt);
+$filelist = $filelistInt;
+
+echo json_encode($filelist), PHP_EOL;
+
 $posts = array();
 
 foreach ( $filelist as $file )

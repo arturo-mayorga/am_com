@@ -1,0 +1,2 @@
+<p><a href="http://www.zonemusicreporter.com/" target="_blank"><img class="alignleft size-thumbnail wp-image-414" title="ZoneMusicReporter.com" src="http://arturomayorga.com/site/wp-content/uploads/2012/05/index-150x29.jpg" alt="" height="29" width="150"></a>The results are in and the news are fantastic. “Lucid Dreams” opened on the top spot for the <a href="http://www.zonemusicreporter.com/charts/top100.asp?m=4&amp;y=2012" target="_blank">April 2012 ZMR Top 100 radio charts</a>. Many thanks to everyone who has supported and/or been involved with this project.</p>
+
