@@ -9,7 +9,7 @@ var POST_SUMM_WIDTH_MAX = 475+20+10; // w + padding + margin
 var POST_SUMM_WIDTH = POST_SUMM_WIDTH_MAX;
 var SCROLL_BAR_WIDTH = 0;
 var PAGE_NAME = '';
-var CONTENT_SERVICE_LOCATION = '../svc/svc.php';
+var CONTENT_SERVICE_LOCATION = './svc/svc.php';
 
 var CATEGORIES = {
     ALL: 0,
