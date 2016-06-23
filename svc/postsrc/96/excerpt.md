@@ -1,4 +1,1 @@
-hyperion-renderer
-=================
-The aim of the project is to create an object-oriented 3D rendering system which abstracts the und....
-
+We are very happy to announce that composer Arturo Mayorga has dedicated the theme song “If We Don’t Who Will” to We Sing For The World!

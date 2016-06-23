@@ -1,4 +1,2 @@
-hyperion-renderer
-=================
-The aim of the project is to create an object-oriented 3D rendering system which abstracts the und....
-
+47’29”
+“Cascades” is the debut recording from pianist/composer Arturo Mayorga. Most of the ten tracks are piano with keyboard orchestration and embellishments, and several indicate a strong influence from Yanni. There is a variety of moods in the pieces – some are soft and romantic while others are darker and more powerful – indicating that Mayorga...

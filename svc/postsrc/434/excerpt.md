@@ -1,4 +1,2 @@
-hyperion-renderer
-=================
-The aim of the project is to create an object-oriented 3D rendering system which abstracts the und....
+<p><a href="http://arturomayorga.com/site/?attachment_id=393" rel="attachment wp-att-393"><img class="alignleft size-thumbnail wp-image-393" title="Lucid Dreams - Cover Art" src="http://arturomayorga.com/site/wp-content/uploads/2012/05/183-6794075-6600956-150x150.jpg" alt="Lucid Dreams - Cover Art" height="150" width="150"></a>Arturo Mayorga has come a long way, literally, from growing up in El Paso, Texas to living in New York City, where he is currently making a name for himself as a recording artist...</p>
 

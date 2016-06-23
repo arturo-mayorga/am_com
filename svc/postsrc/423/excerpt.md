@@ -1,4 +1,1 @@
-hyperion-renderer
-=================
-The aim of the project is to create an object-oriented 3D rendering system which abstracts the und....
-
+<p style="text-align: left;" align="center"><img class="alignright size-thumbnail wp-image-424" title="DSC_0064_2" src="http://arturomayorga.com/site/wp-content/uploads/2012/05/DSC_0064_2-150x115.jpg" alt="" height="115" width="150">Arturo Mayorga presents a collection of eleven tunes that accomplish what good music does – take listeners’ minds off their cares and transport them...</p>
