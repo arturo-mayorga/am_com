@@ -1,4 +1,4 @@
-<p/><div class="embed-container"><iframe src="http://www.youtube.com/embed/yb-zxYBKzC4" frameborder="0" height="auto" width="100%"></iframe></div>
+<p/><div class="embed-container"><iframe src="http://www.youtube.com/embed/yb-zxYBKzC4?showinfo=0" frameborder="0" height="auto" width="100%"></iframe></div>
 <p>www.ArturoMayorga.com<br>
 This 2012, composer/producer Arturo Mayorga along with gammy award winner producer/sound engineer Corin Nelsen present Arturo’s new album Lucid Dreams</p>
 <p>Artists in order of appearnce:<br>

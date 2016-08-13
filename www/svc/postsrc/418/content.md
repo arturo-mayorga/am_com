@@ -1,4 +1,4 @@
-<p/><div class="embed-container"><iframe src="http://www.youtube.com/embed/aj-IRTF2eOo" frameborder="0" height="auto" width="100%"></iframe></div>
+<p/><div class="embed-container"><iframe src="http://www.youtube.com/embed/aj-IRTF2eOo?showinfo=0" frameborder="0" height="auto" width="100%"></iframe></div>
 <p>Arturo Mayorga performing ‘If We Don’t, Who Will?’ from the album ‘Lucid Dreams’ @ The White Plains Performing Arts Center for the ‘We Sing For Team Donovan’ benefit concert.</p>
 <p>We Sing For Team Donovan was organized by We Sing For The World in partnership with The White Plains Performing Arts Center.</p>
 <p>Download this track from <a href="http://itunes.apple.com/us/album/if-we-dont-who-will/id514977457?i=514977538&amp;uo=4" target="itunes_store"><img style="border: 0;" src="http://r.mzstatic.com/images/web/linkmaker/badge_itunes-sm.gif" alt="If We Don't, Who Will - Lucid Dreams"></a></p>
